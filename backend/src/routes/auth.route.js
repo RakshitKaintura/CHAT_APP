@@ -1,15 +1,20 @@
+
 import express from "express";
+import { signup } from "../controllers/auth.controller.js";
 
-const router =express.Router();
+const router = express.Router();
 
-router.get("/signup",(req,res)=>{
-res.send("Signup Succesful");
+// CHANGE THIS: signup should be a POST request to accept body data
+router.post("/signup", signup);
+
+// CHANGE THIS: login should usually be POST to keep credentials out of the URL
+router.post("/login", (req, res) => {
+    res.send("Login Successful");
 });
-router.get("/login",(req,res)=>{
-res.send("Login  Succesful");
-});
-router.get("/logout ",(req,res)=>{
-res.send("Logout Succesful");
+
+// FIX TYPO: removed the space after "/logout "
+router.get("/logout", (req, res) => {
+    res.send("Logout Successful");
 });
 
 export default router;
