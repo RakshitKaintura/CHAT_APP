@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* --- ADD THIS BLOCK --- */
+/* --- 1. Animation Setup --- */
 @theme {
   @keyframes border {
     to {
@@ -10,7 +10,6 @@
   }
   --animate-border: border 4s linear infinite;
 }
-/* ---------------------- */
 
 @property --border-angle {
   inherits: false;
@@ -18,6 +17,7 @@
   syntax: "<angle>";
 }
 
+/* --- 2. Component Classes --- */
 .input {
   @apply w-full bg-slate-800/50 border border-slate-700 rounded-lg py-2 pl-10 pr-4 text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
 }
@@ -42,4 +42,38 @@
 .auth-link {
   @apply px-4 py-2 inline-block bg-cyan-500/10 rounded-lg text-cyan-400
   hover:text-cyan-500 text-sm transition-colors;
+}
+
+/* src/index.css */
+
+/* 1. ONLINE DOT - Vibrant Green like the screenshot */
+.avatar.online:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  display: block;
+  border-radius: 9999px;
+  --size: 15%;
+  width: var(--size);
+  height: var(--size);
+  background-color: #10b981 !important; /* Emerald-500 (Matches screenshot green) */
+  box-shadow: 0 0 0 2px #1e293b; /* Dark ring (matches background) */
+  top: 7%;
+  right: 7%;
+}
+
+/* 2. OFFLINE DOT - Visible Slate Grey (Like 'Jane Doe') */
+.avatar.offline:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  display: block;
+  border-radius: 9999px;
+  --size: 15%;
+  width: var(--size);
+  height: var(--size);
+  background-color: #101113 !important; /* Slate-600 (The visible dark grey) */
+  box-shadow: 0 0 0 2px #1e293b; /* Dark ring (matches background) */
+  top: 7%;
+  right: 7%;
 }
