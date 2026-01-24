@@ -18,10 +18,10 @@ A modern, full-stack real-time chat application built with the MERN stack, featu
 <div align="center">
 
 ### Authentication Pages
-<img src="screenshots/login.png" alt="Login Page" width="45%"/> <img src="screenshots/signup.png" alt="Signup Page" width="45%"/>
+<img src="frontend/public/LoginPage.png" alt="Login Page" width="45%"/> <img src="frontend/public/SignupPage.png" alt="Signup Page" width="45%"/>
 
 ### Chat Interface
-<img src="screenshots/empty-state.png" alt="Empty Chat State" width="45%"/> <img src="screenshots/active-chat.png" alt="Active Chat" width="45%"/>
+<img src="frontend/public/ChatPage.png" alt="Chat Page" width="45%"/> <img src="frontend/public/RealTimeChat.png" alt="Real-Time Messaging" width="45%"/>
 
 *Beautiful, modern UI with real-time messaging and image sharing capabilities*
 
@@ -93,8 +93,8 @@ A modern, full-stack real-time chat application built with the MERN stack, featu
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/yourusername/chat-app.git
-   cd chat-app
+   git clone https://github.com/RakshitKaintura/CHAT_APP.git
+   cd CHAT_APP
 ```
 
 2. **Install dependencies**
@@ -103,7 +103,7 @@ A modern, full-stack real-time chat application built with the MERN stack, featu
    npm install
 
    # Install frontend dependencies
-   cd client
+   cd frontend
    npm install
 ```
 
@@ -138,8 +138,8 @@ A modern, full-stack real-time chat application built with the MERN stack, featu
    # Run backend (from root directory)
    npm run dev
 
-   # Run frontend (from client directory)
-   cd client
+   # Run frontend (from frontend directory)
+   cd frontend
    npm run dev
 ```
 
@@ -151,23 +151,24 @@ A modern, full-stack real-time chat application built with the MERN stack, featu
 
 ## 📁 Project Structure
 ```
-chat-app/
-├── client/                 # Frontend React application
+CHAT_APP/
+├── frontend/              # Frontend React application
 │   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── pages/         # Page components
-│   │   ├── store/         # Zustand store
-│   │   ├── utils/         # Utility functions
-│   │   └── App.jsx        # Main app component
+│   │   ├── components/   # React components
+│   │   ├── pages/        # Page components
+│   │   ├── store/        # Zustand store
+│   │   ├── utils/        # Utility functions
+│   │   └── App.jsx       # Main app component
+│   ├── public/           # Static assets & screenshots
 │   └── package.json
-├── server/                # Backend application
-│   ├── controllers/       # Route controllers
-│   ├── models/           # Database models
-│   ├── routes/           # API routes
-│   ├── middleware/       # Custom middleware
-│   ├── socket/           # Socket.io handlers
-│   └── server.js         # Server entry point
-├── .env                  # Environment variables
+├── backend/              # Backend application
+│   ├── controllers/      # Route controllers
+│   ├── models/          # Database models
+│   ├── routes/          # API routes
+│   ├── middleware/      # Custom middleware
+│   ├── socket/          # Socket.io handlers
+│   └── server.js        # Server entry point
+├── .env                 # Environment variables
 └── package.json
 ```
 
@@ -239,8 +240,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
+**Rakshit Kaintura**
+- GitHub: [@RakshitKaintura](https://github.com/RakshitKaintura)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 - Portfolio: [your-portfolio.com](https://your-portfolio.com)
 
